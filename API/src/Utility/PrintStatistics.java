@@ -1,4 +1,4 @@
-package com.company;
+package Utility;
 
 public class PrintStatistics {
     private static int N;

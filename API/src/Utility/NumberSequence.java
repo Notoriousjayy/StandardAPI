@@ -1,5 +1,5 @@
-package com.company;
-
+package Utility;
+import com.company.Points2D;
 public class NumberSequence {
     public double next(){
         return (new Points2D().radius());

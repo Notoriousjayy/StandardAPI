@@ -1,7 +1,8 @@
 package com.company;
 
-import Models.CircularListMemoryAllocation;
-import Utility.Matrix;
+import Utility.*;
+import Models.*;
+
 
 import java.util.Scanner;
 
