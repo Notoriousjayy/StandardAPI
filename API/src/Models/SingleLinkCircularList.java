@@ -8,7 +8,7 @@ public class SingleLinkCircularList {
      * Description:
      */
     SingleLinkNode next(SingleLinkNode x){
-        return x.next;
+        return x.getNext();
     }
 
     /**
@@ -17,7 +17,7 @@ public class SingleLinkCircularList {
      * Description: returns the value of the node
      */
     int val(SingleLinkNode x){
-        return x.info;
+        return x.getInfo();
     }
     /**
      * Input: a node and a value
@@ -27,11 +27,11 @@ public class SingleLinkCircularList {
     SingleLinkNode insert(SingleLinkNode previousSingleLinkNode, int value){
         SingleLinkNode newSingleLinkNode = new SingleLinkNode(value);
         if (previousSingleLinkNode == null) {
-            newSingleLinkNode.next = newSingleLinkNode;
+            newSingleLinkNode.setNext(newSingleLinkNode);
         }
         else {
-            newSingleLinkNode.next = previousSingleLinkNode.next;
-            previousSingleLinkNode.next = newSingleLinkNode;
+            newSingleLinkNode.setNext(previousSingleLinkNode.getNext());
+            previousSingleLinkNode.setNext(newSingleLinkNode);
         }
         return newSingleLinkNode;
     }
@@ -42,7 +42,7 @@ public class SingleLinkCircularList {
      * Description: removes a node from the list
      */
     void remove(SingleLinkNode head){
-        head.next = head.next.next;
+        head.setNext(head.getNext().getNext());
     }
 
     /**
@@ -59,8 +59,8 @@ public class SingleLinkCircularList {
         SingleLinkNode temp = head;
         do
         {
-            System.out.print( temp.info + " ");
-            temp = temp.next;
+            System.out.print( temp.getInfo() + " ");
+            temp = temp.getNext();
         } while (temp != head);
     }
 
@@ -83,11 +83,11 @@ public class SingleLinkCircularList {
         do
         {
             // This is a reference to the next node to visit in the list
-            next = current.next;
+            next = current.getNext();
 
             // This updates the current nodes next link to the
             // previously traversed (visited) node
-            current.next = previous;
+            current.setNext(previous);
 
             // This updates previous link to the node we just traversed
             previous = current;
@@ -98,7 +98,7 @@ public class SingleLinkCircularList {
 
         // adjutsing the links so as to make the
         // last node point to the first node
-        (head).next = previous;
+        (head).setNext(previous);
         head = previous;
         return head;
     }

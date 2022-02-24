@@ -2,11 +2,27 @@ package Models;
 
 public class SingleLinkNode {
 
-    int info;               // data
+    private int info;               // data
 
-    SingleLinkNode next;    // Link variable
+    private SingleLinkNode next;    // Link variable
 
     SingleLinkNode(int info) {
         this.info = info;
+    }
+
+    public int getInfo() {
+        return info;
+    }
+
+    public void setInfo(int info) {
+        this.info = info;
+    }
+
+    public SingleLinkNode getNext() {
+        return next;
+    }
+
+    public void setNext(SingleLinkNode next) {
+        this.next = next;
     }
 }
