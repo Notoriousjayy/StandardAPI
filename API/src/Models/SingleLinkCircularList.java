@@ -3,9 +3,10 @@ package Models;
 public class SingleLinkCircularList {
 
     /**
-     * Input: a node
-     * Output: the next node in the list
-     * Description:
+     * Input: a Singly linked node
+     * Output: gets the next node in the list
+     * Description: This procedure gets the next node in a circularly linked
+     *              list.
      */
     SingleLinkNode next(SingleLinkNode x){
         return x.getNext();
