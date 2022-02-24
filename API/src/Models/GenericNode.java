@@ -15,9 +15,9 @@ public class GenericNode {
      *      x.next = temp;
      *
      */
-    public Object item;
-    public GenericNode next;  // Link variable
-    public int value;
+    private Object item;
+    private GenericNode next;  // Link variable
+    private int value;
 
 
     public GenericNode(Object value) {
@@ -55,4 +55,27 @@ public class GenericNode {
         return r;
     }
 
+    public Object getItem() {
+        return item;
+    }
+
+    public void setItem(Object item) {
+        this.item = item;
+    }
+
+    public GenericNode getNext() {
+        return next;
+    }
+
+    public void setNext(GenericNode next) {
+        this.next = next;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
 }

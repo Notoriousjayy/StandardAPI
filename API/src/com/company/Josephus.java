@@ -13,16 +13,16 @@ public class Josephus {
         GenericNode temp = new GenericNode(1);
         GenericNode x = temp;
         for(int i = 2; i <= N; i++){
-            x = (x.next = new GenericNode(i));
+            x.setNext(new GenericNode(i));
         }
-        x.next = temp;
-        while (x != x.next){
+        x.setNext(temp);
+        while (x != x.getNext()){
             for(int i = 1; i < M; i++){
-                x = x.next;
+                x = x.getNext();
             }
 
-            x.next = x.next.next; // Removes the node following node x from the list
+            x.setNext(x.getNext().getNext()); // Removes the node following node x from the list
         }
-        System.out.println("Survivor is " + x.item);
+        System.out.println("Survivor is " + x.getItem());
     }
 }
