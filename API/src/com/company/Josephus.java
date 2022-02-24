@@ -10,12 +10,14 @@ public class Josephus {
      * description:
      */
     public static void JosephusFunction(int N, int M){
-        GenericNode temp = new GenericNode(1);
+        GenericNode temp = new GenericNode(0);
         GenericNode x = temp;
-        for(int i = 2; i <= N; i++){
+
+        for(int i = 1; i < N; i++){
             x.setNext(new GenericNode(i));
         }
         x.setNext(temp);
+
         while (x != x.getNext()){
             for(int i = 1; i < M; i++){
                 x = x.getNext();
