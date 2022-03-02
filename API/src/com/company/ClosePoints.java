@@ -24,8 +24,17 @@ public class ClosePoints {
 
         System.out.println();
         System.out.println("Point A" + "\t\t" + "Point B " + "\t" + "Distance");
-
+        /**
+         * Initialization:
+         * Maintenance:
+         * Termination:
+         */
         for (int i = 0; i < N; i++) {
+            /**
+             * Initialization:
+             * Maintenance:
+             * Termination:
+             */
             for (int j = i + 1; j < N; j++) {
                 distance = Math.min(distance,points[i].distance(points[j]));
 

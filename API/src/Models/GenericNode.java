@@ -21,13 +21,13 @@ public class GenericNode {
 
 
     public GenericNode(Object value) {
-        item = value;
-        next = null;
+        this.item = value;
+        this.next = null;
     }
 
     public GenericNode(int value, GenericNode t) {
         this.value = value;
-        next = t;
+        this.next = t;
     }
 
 

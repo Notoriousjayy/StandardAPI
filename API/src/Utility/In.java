@@ -30,11 +30,22 @@ public class In {
             return null;
         }
         String s = "";
+
+        /**
+         * Initialization:
+         * Maintenance:
+         * Termination:
+         */
         do {
             s += (char) c;
             readC();
         } while (!(empty()) | blank());
 
+        /**
+         * Initialization:
+         * Maintenance:
+         * Termination:
+         */
         while(!empty() && blank()){
             readC();
         }

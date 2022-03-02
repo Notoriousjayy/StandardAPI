@@ -81,6 +81,12 @@ public class SingleLinkCircularList {
         SingleLinkNode previous = null;
         SingleLinkNode current = head;
         SingleLinkNode next;
+
+        /**
+         * Initialization:
+         * Maintenance:
+         * Termination:
+         */
         do
         {
             // This is a reference to the next node to visit in the list

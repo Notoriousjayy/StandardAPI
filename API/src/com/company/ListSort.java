@@ -25,6 +25,11 @@ public class ListSort {
      */
     public static Node create(){
         Node a = new Node(0, null);
+        /**
+         * Initialization:
+         * Maintenance:
+         * Termination:
+         */
         for(In.init(); !In.empty();){
             a.next = new Node(In.getInt(), a.next);
         }
@@ -42,11 +47,21 @@ public class ListSort {
         Node x;
         Node b = new Node(0, null);
 
+        /**
+         * Initialization:
+         * Maintenance:
+         * Termination:
+         */
         while(a.next != null){
             t = a.next;
             u = t.next;
             a.next = u;
 
+            /**
+             * Initialization:
+             * Maintenance:
+             * Termination:
+             */
             for(x = b; x.next != null; x = x.next){
                 if (x.next.value > t.value){
                     break;
@@ -64,6 +79,11 @@ public class ListSort {
      * description:
      */
     public static void print(Node head) {
+        /**
+         * Initialization:
+         * Maintenance:
+         * Termination:
+         */
         for(Node t = head.next; t!= null; t = t.next){
             System.out.println(t.value + "");
         }

@@ -16,6 +16,11 @@ public class PrintStatistics {
      */
     public static void statistics(int N) {
         NumberSequence numberSequence = new NumberSequence();
+        /**
+         * Initialization:
+         * Maintenance:
+         * Termination:
+         */
         for (int i = 0; i < N; i++) {
             double d = numberSequence.next();
             int j = i+1;

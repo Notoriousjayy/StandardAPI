@@ -16,9 +16,18 @@ public class Strings {
         if (M > N) {
             return 0;
         }
-
+        /**
+         * Initialization:
+         * Maintenance:
+         * Termination:
+         */
         for (int i = 0; i < N; i++) {
             int j;
+            /**
+             * Initialization:
+             * Maintenance:
+             * Termination:
+             */
             for (j = 0; j < M; j++) {
                 if (text.charAt(i + j) != pattern.charAt(j)) {
                     if (text.charAt(i + j) != pattern.charAt(j)) {
@@ -56,6 +65,11 @@ public class Strings {
 
         // The main loop copies the next string character into
         // a[N] if it is not an black of if a[N-1] is an black.
+        /**
+         * Initialization:
+         * Maintenance:
+         * Termination:
+         */
         for(int i = 1; i < a.length; i++){
             a[N] = a[i];
             if(a[N] != ' '){

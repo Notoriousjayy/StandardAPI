@@ -18,6 +18,11 @@ class Main {
         Points2D[] points = new Points2D[N];
 
         // Generates random points into a list.
+        /**
+         * Initialization:
+         * Maintenance:
+         * Termination:
+         */
         for (int i = 0; i < N; i++) {
             points[i] = numberSequence.nextPoint();
         }
@@ -63,10 +68,27 @@ class Main {
          */
         CircularListMemoryAllocation List = new CircularListMemoryAllocation();
         CircularListMemoryAllocation.Node x = null;
+
+        /**
+         * Initialization:
+         * Maintenance:
+         * Termination:
+         */
         for(int i = 1; i <= N; i++){
             x = List.insert(x, i);
         }
+
+        /**
+         * Initialization:
+         * Maintenance:
+         * Termination:
+         */
         while(x != List.next(x)){
+            /**
+             * Initialization:
+             * Maintenance:
+             * Termination:
+             */
             for(int i =1; i < M; i++){
                 x = List.next(x);
             }

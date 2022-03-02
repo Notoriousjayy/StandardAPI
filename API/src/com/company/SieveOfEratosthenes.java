@@ -9,9 +9,19 @@ public class SieveOfEratosthenes {
      */
     public static void Sieve(int n) {
         boolean[] a = new boolean[n];
+        /**
+         * Initialization:
+         * Maintenance:
+         * Termination:
+         */
         for (int i = 2; i < n; i++) {
             a[i] = true;
         }
+        /**
+         * Initialization:
+         * Maintenance:
+         * Termination:
+         */
         for (int i = 2; i < n; i++) {
             if(a[i] != false){
                 for (int j = i; j * i < n; j++){
@@ -20,6 +30,11 @@ public class SieveOfEratosthenes {
             }
         }
         System.out.println("Number of prime numbers up to "+ n +":");
+        /**
+         * Initialization:
+         * Maintenance:
+         * Termination:
+         */
         for(int i = 2; i < n; i++){
             if (i > n - 100){
                 if (a[i]){

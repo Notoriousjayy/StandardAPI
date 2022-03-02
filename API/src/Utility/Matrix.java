@@ -15,6 +15,12 @@ public class Matrix {
          * Output: an array of size n initilized to 0
          */
         double[][] c = new double[N][N];
+
+        /**
+         * Initialization:
+         * Maintenance:
+         * Termination:
+         */
         for(int i = 0; i < N; i++){
             for(int j = 0; j < N; j++){
                 c[i][j] = 0.0;
@@ -37,7 +43,18 @@ public class Matrix {
         int N = a.length;
         double[][] c = new double[N][N];
 
+        /**
+         * Initialization:
+         * Maintenance:
+         * Termination:
+         */
         for(int i = 0; i < N; i++){
+
+            /**
+             * Initialization:
+             * Maintenance:
+             * Termination:
+             */
             for(int j = 0; j < N; j++){
                 for(int k = 0; k < N; k++){
                     c[i][j] += a[i][k] * b[k][j];
@@ -53,7 +70,17 @@ public class Matrix {
      * description: Finds the Transpose of the matrix
      */
     public static void Transpose(double arr[][]) {
+        /**
+         * Initialization:
+         * Maintenance:
+         * Termination:
+         */
         for (int i = 0; i < arr[0].length; i++) {
+            /**
+             * Initialization:
+             * Maintenance:
+             * Termination:
+             */
             for (int j = 0; j < arr.length; j++) {
 //                System.out.print(arr[j][i] + "\t");
             }
@@ -70,7 +97,17 @@ public class Matrix {
          * Input: A 2-dimensional matrix
          * Output: print the matrix to standard output
          */
+        /**
+         * Initialization:
+         * Maintenance:
+         * Termination:
+         */
         for (int i = 0; i < arr[0].length; i++) {
+            /**
+             * Initialization:
+             * Maintenance:
+             * Termination:
+             */
             for (int j = 0; j < arr.length; j++) {
                 System.out.print(arr[j][i] + "\t");
             }
@@ -113,6 +150,11 @@ public class Matrix {
          */
         try{
          matrix = new double[2][N];
+            /**
+             * Initialization:
+             * Maintenance:
+             * Termination:
+             */
             for (int i = 0; i < N; i++) {
 
                 // Initialzies the X column
