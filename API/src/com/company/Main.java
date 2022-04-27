@@ -15,7 +15,7 @@ class Main {
         System.out.print("Enter the number of random points you want to generate.\t");
 
         int N = number.nextInt();
-        Points2D[] points = new Points2D[N];
+        Real2DPoint[] points = new Real2DPoint[N];
 
         // Generates random points into a list.
         /**
@@ -58,7 +58,7 @@ class Main {
         int M = number.nextInt();
 //      Fix this
 //        ListSort.print(ListSort.sort(ListSort.create()));
-        Josephus.JosephusFunction(N,M);
+        Josephus.JosephusFunction(N, M);
 
         /**
          * This is a client implementation of CircularList class to solve the Josephus problem.
@@ -74,7 +74,7 @@ class Main {
          * Maintenance:
          * Termination:
          */
-        for(int i = 1; i <= N; i++){
+        for (int i = 1; i <= N; i++) {
             x = List.insert(x, i);
         }
 
@@ -83,13 +83,13 @@ class Main {
          * Maintenance:
          * Termination:
          */
-        while(x != List.next(x)){
+        while (x != List.next(x)) {
             /**
              * Initialization:
              * Maintenance:
              * Termination:
              */
-            for(int i =1; i < M; i++){
+            for (int i = 1; i < M; i++) {
                 x = List.next(x);
             }
             List.remove(x);

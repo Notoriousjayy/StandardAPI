@@ -1,6 +1,6 @@
 package Utility;
 
-import com.company.Points2D;
+import com.company.Real2DPoint;
 
 public class Matrix {
 
@@ -9,7 +9,7 @@ public class Matrix {
      * output:
      * description:
      */
-    public static double[][] initializeMatrix(int N){
+    public static double[][] initializeMatrix(int N) {
         /**
          * Input: Size of array n
          * Output: an array of size n initilized to 0
@@ -21,8 +21,8 @@ public class Matrix {
          * Maintenance:
          * Termination:
          */
-        for(int i = 0; i < N; i++){
-            for(int j = 0; j < N; j++){
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
                 c[i][j] = 0.0;
             }
         }
@@ -34,9 +34,9 @@ public class Matrix {
      * output:
      * description:
      */
-    public static double[][] multiply(double[][] a, double[][] b){
+    public static double[][] multiply(double[][] a, double[][] b) {
         /**
-         * Input: This function takes in to matricies.
+         * Input: This function takes in two matrices.
          * Output: returns the product of the two matrices.
          * Description:
          */
@@ -48,15 +48,15 @@ public class Matrix {
          * Maintenance:
          * Termination:
          */
-        for(int i = 0; i < N; i++){
+        for (int i = 0; i < N; i++) {
 
             /**
              * Initialization:
              * Maintenance:
              * Termination:
              */
-            for(int j = 0; j < N; j++){
-                for(int k = 0; k < N; k++){
+            for (int j = 0; j < N; j++) {
+                for (int k = 0; k < N; k++) {
                     c[i][j] += a[i][k] * b[k][j];
                 }
             }
@@ -92,7 +92,7 @@ public class Matrix {
      * output:
      * description:
      */
-    public static void printMatrix(double arr[][]){
+    public static void printMatrix(double arr[][]) {
         /**
          * Input: A 2-dimensional matrix
          * Output: print the matrix to standard output
@@ -120,12 +120,12 @@ public class Matrix {
      * output:
      * description:
      */
-    public static void printPointsList(Points2D arr[]){
+    public static void printPointsList(Real2DPoint arr[]) {
         /**
          * Input: Takes in a 1-Dimmensional array of points
          * Output: prints the points to standard output
          */
-        for(Points2D point: arr){
+        for (Real2DPoint point : arr) {
             System.out.println(point);
         }
     }
@@ -135,7 +135,7 @@ public class Matrix {
      * output:
      * description:
      */
-    public static double[][] convertToMatrix(Points2D[] points, int N){
+    public static double[][] convertToMatrix(Real2DPoint[] points, int N) {
         /**
          * Input: Takes in a list of poiints and the size of the list
          * Output: Converts the points list to a matrix and returns the matrix
@@ -148,8 +148,8 @@ public class Matrix {
          * Always test if a user enters a number that is too large to fit inside of an integer.
          * If the number is too large throw an OutOfMemoryError exception.
          */
-        try{
-         matrix = new double[2][N];
+        try {
+            matrix = new double[2][N];
             /**
              * Initialization:
              * Maintenance:
@@ -164,9 +164,10 @@ public class Matrix {
                 matrix[1][i] = points[i].getY();
             }
             return matrix;
-        } catch (OutOfMemoryError e){
+        } catch (OutOfMemoryError e) {
             System.out.println("Out of memeory");
-        };
+        }
+        ;
         return null;
     }
 }

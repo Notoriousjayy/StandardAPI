@@ -5,28 +5,28 @@ import java.io.IOException;
 public class In {
     private static int c;
 
-    private static boolean  blank(){
+    private static boolean blank() {
         return Character.isWhitespace((char) c);
     }
 
-    private static void readC(){
-        try{
+    private static void readC() {
+        try {
             c = System.in.read();
-        } catch (IOException e){
+        } catch (IOException e) {
             c = -1;
         }
     }
 
-    public static void init(){
+    public static void init() {
         readC();
     }
 
-    public static boolean empty(){
+    public static boolean empty() {
         return c == -1;
     }
 
-    public static String getString(){
-        if(empty()){
+    public static String getString() {
+        if (empty()) {
             return null;
         }
         String s = "";
@@ -46,17 +46,17 @@ public class In {
          * Maintenance:
          * Termination:
          */
-        while(!empty() && blank()){
+        while (!empty() && blank()) {
             readC();
         }
         return s;
     }
 
-    public static int getInt(){
+    public static int getInt() {
         return Integer.parseInt(getString());
     }
 
-    public static double getDouble(){
+    public static double getDouble() {
         return Double.parseDouble(getString());
     }
 }

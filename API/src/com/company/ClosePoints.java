@@ -6,20 +6,19 @@ public class ClosePoints {
 
     int N;
     double distance;
-    Points2D[] points;
+    Real2DPoint[] points;
     int firstPoint = 0;
     int secondPoint = 0;
 
-    public ClosePoints(int N, Points2D[] points) {
+    public ClosePoints(int N, Real2DPoint[] points) {
         /**
          * Finds the distance between two closest points in the plane by brute force
          * Input: A list of Points of N (N >= 2) points
          * Output: The Euclidean distance between the closest pair of points d
          */
-
         this.N = N;
         this.points = points;
-        this.distance= Double.POSITIVE_INFINITY;
+        this.distance = Double.POSITIVE_INFINITY;
         double lowest;
 
         System.out.println();
@@ -36,10 +35,10 @@ public class ClosePoints {
              * Termination:
              */
             for (int j = i + 1; j < N; j++) {
-                distance = Math.min(distance,points[i].distance(points[j]));
+                distance = Math.min(distance, points[i].distance(points[j]));
 
                 //
-                if(distance == points[i].distance(points[j])){
+                if (distance == points[i].distance(points[j])) {
                     firstPoint = i;
                     secondPoint = j;
                 }
@@ -49,13 +48,14 @@ public class ClosePoints {
             }
         }
     }
+
     @Override
     public String toString() {
-        return "ClosePoints{" + "\n"+
-                "\tnumberOfPoints = " + N + ",\n"+
-                "\tminimumDistance = " + distance + ",\n"+
-                "\tpointsList = " + Arrays.toString(points) + ",\n"+
-                "\tclosestPair = " + "point: " + firstPoint + " and "+" point: "+ secondPoint + ",\n"+
+        return "ClosePoints{" + "\n" +
+                "\tnumberOfPoints = " + N + ",\n" +
+                "\tminimumDistance = " + distance + ",\n" +
+                "\tpointsList = " + Arrays.toString(points) + ",\n" +
+                "\tclosestPair = " + "point: " + firstPoint + " and " + " point: " + secondPoint + ",\n" +
                 '}';
     }
 }

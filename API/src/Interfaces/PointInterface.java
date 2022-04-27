@@ -1,9 +1,11 @@
 package Interfaces;
 
-import com.company.Points2D;
+import com.company.Real2DPoint;
 
 public interface PointInterface {
     double theta();
-    double distance(Points2D point);
+
+    double distance(Real2DPoint point);
+
     double radius();
 }

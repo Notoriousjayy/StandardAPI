@@ -1,7 +1,7 @@
 package AbstractClasses;
 
 
-abstract public class Points2DBase extends Point{
+abstract public class Points2DBase extends Point {
     double y;
 
     public Points2DBase() {

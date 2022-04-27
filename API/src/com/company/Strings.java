@@ -3,9 +3,9 @@ package com.company;
 public class Strings {
 
     /**
-     *  Input: A pattern to search for and text to search in.
-     *  Output: The count of occurences
-     *  Description: This method discovers all ocurrences of a pattern in a given text.
+     * Input: A pattern to search for and text to search in.
+     * Output: The count of occurences
+     * Description: This method discovers all ocurrences of a pattern in a given text.
      */
     public static int countMatches(String pattern, String text) {
 
@@ -48,15 +48,15 @@ public class Strings {
      * description: This method returns a string that is the same as the string given
      * as its parameter except that each sequence of blank charachers is replaced with
      * a single black character.
-     *
+     * <p>
      * NOTE
-     *
-     *      Since Java strings are immuatble objects and cannot be changed
-     *      to solve this issue we:
-     *      copy into a character array, then change the character array,
-     *      then create a new String with the result.
+     * <p>
+     * Since Java strings are immuatble objects and cannot be changed
+     * to solve this issue we:
+     * copy into a character array, then change the character array,
+     * then create a new String with the result.
      */
-    public static String squeeze(String word){
+    public static String squeeze(String word) {
 
         char[] a = word.toCharArray();
 
@@ -70,12 +70,11 @@ public class Strings {
          * Maintenance:
          * Termination:
          */
-        for(int i = 1; i < a.length; i++){
+        for (int i = 1; i < a.length; i++) {
             a[N] = a[i];
-            if(a[N] != ' '){
+            if (a[N] != ' ') {
                 N++;
-            }
-            else if(a[N - 1] != ' '){
+            } else if (a[N - 1] != ' ') {
                 N++;
             }
         }

@@ -6,14 +6,13 @@ public class GenericNode {
      * We will eventually be adding subroutines that will do this for us.
      * For now we will be directly removing nodes in out list with the following notation
      * Remove Node:
-     *      temp = x.next;
-     *      x.next = temp.next; or simply
-     *      x.next = x.next.next;
-     *
+     * temp = x.next;
+     * x.next = temp.next; or simply
+     * x.next = x.next.next;
+     * <p>
      * Insert Node
-     *      temp.next = x.next;
-     *      x.next = temp;
-     *
+     * temp.next = x.next;
+     * x.next = temp;
      */
     private Object item;
     private GenericNode next;  // Link variable
@@ -31,7 +30,7 @@ public class GenericNode {
     }
 
 
-    public static GenericNode reverse(GenericNode x){
+    public static GenericNode reverse(GenericNode x) {
         /**
          * This method reverses the links in a list, return a pointer to the final node,
          * which then points  to the next-to-final node, and so fourth, with the link in the
@@ -46,7 +45,7 @@ public class GenericNode {
 
         // a pointer to the position of the list already processed.
         GenericNode r = null;
-        while(y != null){
+        while (y != null) {
             t = y.next;
             y.next = r;
             r = y;

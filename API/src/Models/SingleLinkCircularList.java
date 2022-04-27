@@ -6,9 +6,9 @@ public class SingleLinkCircularList {
      * Input: a Singly linked node
      * Output: gets the next node in the list
      * Description: This procedure gets the next node in a circularly linked
-     *              list.
+     * list.
      */
-    SingleLinkNode next(SingleLinkNode x){
+    SingleLinkNode next(SingleLinkNode x) {
         return x.getNext();
     }
 
@@ -17,20 +17,20 @@ public class SingleLinkCircularList {
      * Output: the value of the node
      * Description: returns the value of the node
      */
-    int val(SingleLinkNode x){
+    int val(SingleLinkNode x) {
         return x.getInfo();
     }
+
     /**
      * Input: a node and a value
      * Output: the next node in the list
      * Description: inserts a new node and its value into a list
      */
-    SingleLinkNode insert(SingleLinkNode previousSingleLinkNode, int value){
+    SingleLinkNode insert(SingleLinkNode previousSingleLinkNode, int value) {
         SingleLinkNode newSingleLinkNode = new SingleLinkNode(value);
         if (previousSingleLinkNode == null) {
             newSingleLinkNode.setNext(newSingleLinkNode);
-        }
-        else {
+        } else {
             newSingleLinkNode.setNext(previousSingleLinkNode.getNext());
             previousSingleLinkNode.setNext(newSingleLinkNode);
         }
@@ -42,7 +42,7 @@ public class SingleLinkCircularList {
      * Output: none
      * Description: removes a node from the list
      */
-    void remove(SingleLinkNode head){
+    void remove(SingleLinkNode head) {
         head.setNext(head.getNext().getNext());
     }
 
@@ -51,16 +51,14 @@ public class SingleLinkCircularList {
      * Output: the circular-list represented to the console
      * Description: Prints the circular list
      */
-    static void printList(SingleLinkNode head)
-    {
+    static void printList(SingleLinkNode head) {
         if (head == null) {
             return;
         }
 
         SingleLinkNode temp = head;
-        do
-        {
-            System.out.print( temp.getInfo() + " ");
+        do {
+            System.out.print(temp.getInfo() + " ");
             temp = temp.getNext();
         } while (temp != head);
     }
@@ -70,8 +68,7 @@ public class SingleLinkCircularList {
      * Output: The list in reverse order
      * Description: Reverses the linked list
      */
-    static SingleLinkNode reverse(SingleLinkNode head)
-    {
+    static SingleLinkNode reverse(SingleLinkNode head) {
         // if list is empty
         if (head == null)
             return null;
@@ -87,8 +84,7 @@ public class SingleLinkCircularList {
          * Maintenance:
          * Termination:
          */
-        do
-        {
+        do {
             // This is a reference to the next node to visit in the list
             next = current.getNext();
 

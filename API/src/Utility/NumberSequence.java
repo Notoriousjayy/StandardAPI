@@ -1,10 +1,13 @@
 package Utility;
-import com.company.Points2D;
+
+import com.company.Real2DPoint;
+
 public class NumberSequence {
-    public double next(){
-        return (new Points2D().radius());
+    public double next() {
+        return (new Real2DPoint().radius());
     }
-    public Points2D nextPoint(){
-        return (new Points2D());
+
+    public Real2DPoint nextPoint() {
+        return (new Real2DPoint());
     }
 }

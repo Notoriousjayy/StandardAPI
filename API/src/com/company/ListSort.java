@@ -12,6 +12,7 @@ public class ListSort {
             this.value = value;
             next = null;
         }
+
         public Node(int value, Node t) {
             this.value = value;
             next = t;
@@ -23,14 +24,14 @@ public class ListSort {
      * output:
      * description:
      */
-    public static Node create(){
+    public static Node create() {
         Node a = new Node(0, null);
         /**
          * Initialization:
          * Maintenance:
          * Termination:
          */
-        for(In.init(); !In.empty();){
+        for (In.init(); !In.empty(); ) {
             a.next = new Node(In.getInt(), a.next);
         }
         return a;
@@ -41,7 +42,7 @@ public class ListSort {
      * output:
      * description:
      */
-    public static Node sort(Node a){
+    public static Node sort(Node a) {
         Node t;
         Node u;
         Node x;
@@ -52,7 +53,7 @@ public class ListSort {
          * Maintenance:
          * Termination:
          */
-        while(a.next != null){
+        while (a.next != null) {
             t = a.next;
             u = t.next;
             a.next = u;
@@ -62,8 +63,8 @@ public class ListSort {
              * Maintenance:
              * Termination:
              */
-            for(x = b; x.next != null; x = x.next){
-                if (x.next.value > t.value){
+            for (x = b; x.next != null; x = x.next) {
+                if (x.next.value > t.value) {
                     break;
                 }
                 t.next = x.next;
@@ -84,7 +85,7 @@ public class ListSort {
          * Maintenance:
          * Termination:
          */
-        for(Node t = head.next; t!= null; t = t.next){
+        for (Node t = head.next; t != null; t = t.next) {
             System.out.println(t.value + "");
         }
     }

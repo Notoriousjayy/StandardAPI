@@ -1,13 +1,8 @@
 package Utility;
 
 public class PrintStatistics {
-    private static int N;
-    private static double m = 0;
-    private static double s = 0;
-
-    public PrintStatistics(int n) {
-        N = n;
-    }
+    private static double mean = 0;
+    private static double standardDeviation = 0;
 
     /**
      * input:
@@ -22,22 +17,22 @@ public class PrintStatistics {
          * Termination:
          */
         for (int i = 0; i < N; i++) {
-            double d = numberSequence.next();
-            int j = i+1;
-            System.out.println("Point " + j +": " + d);
+            double distance = numberSequence.next();
+            int j = i + 1;
+            System.out.println("Point " + j + ": " + distance);
 
             // Calculates the Average
-            m += d / N;
+            mean += distance / N;
 
             // Calculates the Standard Deviation
-            s += (d * d) / N;
+            standardDeviation += (distance * distance) / N;
         }
-        s = Math.sqrt(s - m * m);
+        standardDeviation = Math.sqrt(standardDeviation - mean * mean);
         System.out.println();
         System.out.println("average distance of " + N + " points from the origin (0,0)");
-        System.out.println("\t Average: " + m);
+        System.out.println("\t Average: " + mean);
         System.out.println();
         System.out.println("standard deviation " + N + " points from the origin (0,0)");
-        System.out.println("\t Standard Deviation: " + s);
+        System.out.println("\t Standard Deviation: " + standardDeviation);
     }
 }

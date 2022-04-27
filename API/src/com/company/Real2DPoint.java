@@ -3,28 +3,28 @@ package com.company;
 import AbstractClasses.Points2DBase;
 import Interfaces.PointInterface;
 
-public class Points2D extends Points2DBase implements PointInterface {
+public class Real2DPoint extends Points2DBase implements PointInterface {
     double x;
     double y;
 
-    public Points2D(){
+    public Real2DPoint() {
         x = Math.random();
         y = Math.random();
     }
 
     @Override
-    public double radius(){
+    public double radius() {
         return Math.sqrt((x * x) + (y * y));
     }
 
     @Override
-    public double theta(){
+    public double theta() {
         return Math.atan2(y, x);
     }
-    
+
     // Euclidean Distance
     // Demonstrates using refrencens to pass objects as parameters to methods
-    public double distance(Points2D point){
+    public double distance(Real2DPoint point) {
         double dx = this.x - point.x;
         double dy = this.y - point.y;
 
@@ -47,7 +47,7 @@ public class Points2D extends Points2DBase implements PointInterface {
         this.y = y;
     }
 
-    public String toString(){
-        return "(" + "x: " + x + ", y: " + y +")";
+    public String toString() {
+        return "(" + "x: " + x + ", y: " + y + ")";
     }
 }

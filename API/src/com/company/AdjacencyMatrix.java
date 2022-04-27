@@ -14,8 +14,8 @@ public class AdjacencyMatrix {
          * Maintenance:
          * Termination:
          */
-        for(int i = 0; i < Node; i++){
-            for(int j = 0; j < Node; j++){
+        for (int i = 0; i < Node; i++) {
+            for (int j = 0; j < Node; j++) {
                 adjacent[i][i] = false;
             }
         }
@@ -24,7 +24,7 @@ public class AdjacencyMatrix {
          * Maintenance:
          * Termination:
          */
-        for(int i = 0; i < Node; i++){
+        for (int i = 0; i < Node; i++) {
             adjacent[i][i] = true;
         }
         /**
@@ -32,7 +32,7 @@ public class AdjacencyMatrix {
          * Maintenance:
          * Termination:
          */
-        for(In.init(); !In.empty();){
+        for (In.init(); !In.empty(); ) {
             int i = In.getInt();
             int j = In.getInt();
             adjacent[i][j] = true;

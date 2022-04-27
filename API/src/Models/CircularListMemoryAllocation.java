@@ -1,11 +1,9 @@
 package Models;
 
-public class CircularListMemoryAllocation
-{
+public class CircularListMemoryAllocation {
     /**
      * This approach of a circular list allocates memory for fixe-sized nodes.
      * We created an array to hold all of the nodes that our program will use, all linked together.
-     *
      */
     public static class Node {
         int value;
@@ -15,12 +13,14 @@ public class CircularListMemoryAllocation
     static Node M[];
     static int free, max = 10000;
 
-    public CircularListMemoryAllocation()
-    {
-        M = new Node[max+1];
-        for (int i = 0; i < max; i++)
-        { M[i] = new Node(); M[i].next = i+1; }
-        M[max] = new Node(); M[max].next = 0;
+    public CircularListMemoryAllocation() {
+        M = new Node[max + 1];
+        for (int i = 0; i < max; i++) {
+            M[i] = new Node();
+            M[i].next = i + 1;
+        }
+        M[max] = new Node();
+        M[max].next = 0;
         free = 0;
     }
 
@@ -29,7 +29,7 @@ public class CircularListMemoryAllocation
      * output:
      * description:
      */
-    public Node next(Node x){
+    public Node next(Node x) {
         return M[x.next];
     }
 
@@ -38,7 +38,7 @@ public class CircularListMemoryAllocation
      * output:
      * description:
      */
-    public int value(Node x){
+    public int value(Node x) {
         return x.value;
     }
 
@@ -47,16 +47,16 @@ public class CircularListMemoryAllocation
      * output:
      * description:
      */
-    public Node insert(Node x, int v){
+    public Node insert(Node x, int v) {
         int i = free;
         free = M[free].next;
 
         M[i].value = v;
         if (x == null) {
             M[i].next = i;
-        }
-        else {
-            M[i].next = x.next;  x.next = i;
+        } else {
+            M[i].next = x.next;
+            x.next = i;
         }
         return M[i];
     }
@@ -66,8 +66,10 @@ public class CircularListMemoryAllocation
      * output:
      * description:
      */
-    public void remove(Node x){
-        int i = x.next; x.next = M[i].next;
-        M[i].next = free; free = i;
+    public void remove(Node x) {
+        int i = x.next;
+        x.next = M[i].next;
+        M[i].next = free;
+        free = i;
     }
 }
