@@ -1,9 +1,9 @@
 package com.company;
 
-import AbstractClasses.Points2DBase;
+
 import Interfaces.PointInterface;
 
-public class Real2DPoint extends Points2DBase implements PointInterface {
+public class Real2DPoint implements PointInterface {
     double x;
     double y;
 
